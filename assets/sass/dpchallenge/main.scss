@@ -1,0 +1,154 @@
+.link {
+  transition: color .2s ease-in;
+
+  color: #003664;
+
+  &:hover {
+    color: #51779e;
+    cursor: pointer;
+  }
+
+  &.link--bold {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+p {
+  font-size: 14px;
+  font-weight: normal;
+  color: #2c2c2c;
+}
+.nav {
+  display: flex;
+  
+  > * {
+    margin: 0 2px;
+  }
+
+  &__item {
+    padding: 8px 12px;
+    border-radius: 4px;
+
+    white-space: nowrap;
+  
+    transition: background .2s ease-in;
+  
+    user-select: none;
+  
+    &:hover {
+      background: #0000001a;
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      padding: 8px 12px;
+
+      transition: background .2s ease-in;
+      
+      user-select: none;
+
+      white-space: nowrap;
+  
+      &:hover {
+        background: #0000001a;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.page {
+  background: rgb(245, 245, 245);
+  min-height: calc(100vh - 70px);
+  padding: 20px;
+}
+
+@media (max-width: 1320px) {
+  .app-header {
+    flex-direction: row-reverse;
+    position: relative;
+
+    .logo {
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      pointer-events: none;
+    }
+
+    .drawer-container {
+      z-index: 99;
+    }
+  }
+
+  .drawer-container {
+    margin-left: 0 !important;
+    margin-right: auto;
+
+    .hide-on-mobile {
+      display: none !important;
+    }
+
+    .drawer-btn {
+      display: block !important;
+    }
+  }
+}
+
+@media (min-width: 1320px) {
+  .app-header {
+    padding: 0 20px !important;
+    .search {
+      order: 1;
+    }
+  }
+}
+
+.text--bold {
+  font-weight: bold;
+}
+
+.text--red {
+  color: hsl(0, 99%, 38%) !important;
+}
+
+.text--muted {
+  color: hsl(0, 0%, 38%) !important;
+}
+
+.silent-link {
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.page.page--main {
+  padding-top: 0;
+}
+
+.highlighted {
+  color: #003664;
+}
+
+@media (min-width: 1536px) {
+  .app-header {
+    // color:red !important;
+    padding: 0 30px !important;
+    height: 90px !important;
+
+    .nav__item {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.qoute {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  padding: 5px 10px;
+
+  background-color: hsl(214, 61%, 92%);
+
+  position: relative;
+
+  border-radius: 3px;
+  overflow: hidden;
+  
+  &__date {
+    margin-left: auto;
+    font-size: 13px;
+  }
+
+  &__from {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: hsl(213, 35%, 69%);
+  }
+}

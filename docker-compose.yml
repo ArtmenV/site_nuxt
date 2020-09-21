@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+    nuxt:
+        build:
+            context: ./
+        ports:
+            - 8001:3000
+        volumes:
+            - ./:/app
+        env_file:
+            - ./.env
+            - ./.env.local
+        user: 1000:1000
+        entrypoint: ["/entrypoint.sh"]
